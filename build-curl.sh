@@ -7,7 +7,7 @@ do
   case "${opt}" in
   s) SHARED=enable;;
   [?]) echo "Usage: $0 [-s]\n\t-s | Compile shared curl library (*.so)"
-       exit 1;;
+       exit 0;;
   esac
 done
 
