@@ -5,7 +5,7 @@ SHARED=disable
 while getopts s opt
 do
   case "${opt}" in
-  s) SHARED=with;;
+  s) SHARED=enable;;
   [?]) echo "Usage: $0 [-s]\n\t-s | Compile shared curl library (*.so)"
        exit 1;;
   esac
