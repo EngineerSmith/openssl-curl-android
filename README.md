@@ -1,6 +1,6 @@
 # openssl-curl-android
 
-Compile openssl and curl for Android
+Compile openssl and curl for Android, with optional shared library build
 
 ## Prerequisites
 
@@ -24,10 +24,11 @@ git submodule update --init --recursive
 
 export ANDROID_NDK_HOME=your_android_ndk_bundle_root_here
 export HOST_TAG=see_this_table_for_info # https://developer.android.com/ndk/guides/other_build_systems#overview
-export MIN_SDK_VERSION=21 # or any version you want
+export MIN_SDK_VERSION=23 # Must be version 23 or above, see curl documentation otherwise OpenSSL will nto compile into libcurl
 
 chmod +x ./build.sh
-./build.sh
+./build.sh # Add '-s' option to produce shared library (*.so) too
+#./build.sh -s
 ```
 
 All compiled libs are located in `build/openssl` and `build/curl` directory.
