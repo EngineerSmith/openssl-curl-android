@@ -67,7 +67,6 @@ make install
 make clean
 mkdir -p ../build/curl/arm64-v8a
 cp -R $PWD/build/arm64-v8a ../build/curl/
-
 # arm
 export TARGET_HOST=armv7a-linux-androideabi
 export TOOLCHAIN=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/$HOST_TAG
@@ -76,7 +75,7 @@ export AR=$TOOLCHAIN/bin/arm-linux-androideabi-ar
 export AS=$TOOLCHAIN/bin/arm-linux-androideabi-as
 export CC=$TOOLCHAIN/bin/$TARGET_HOST$MIN_SDK_VERSION-clang
 export CXX=$TOOLCHAIN/bin/$TARGET_HOST$MIN_SDK_VERSION-clang++
-export LD=$TOOLCHAIN/bin/$TARGET_HOST-ld
+export LD=$TOOLCHAIN/bin/arm-linux-androideabi-ld
 export RANLIB=$TOOLCHAIN/bin/arm-linux-androideabi-ranlib
 export STRIP=$TOOLCHAIN/bin/arm-linux-androideabi-strip
 export SSL_DIR=$PWD/../openssl/build/armeabi-v7a
